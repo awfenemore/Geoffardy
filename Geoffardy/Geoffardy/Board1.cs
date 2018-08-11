@@ -16,5 +16,10 @@ namespace Geoffardy
         {
             InitializeComponent();
         }
+
+        private void pictureBox28_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
