@@ -20,12 +20,16 @@ namespace Geoffardy
         //Points value of the question
         private int points;
 
+        //Daily Double status. All but one will be false, across all questions
+        Boolean dailyDoubleStatus;
+
 
 
         //Constructor. Takes delimited string and populates question string and suggested answer list
         public Question (String delimitedString)
         {
             //TODO
+            dailyDoubleStatus = false;
             answeredStatus = false;
             answers = new List<string>();
         }
@@ -55,6 +59,18 @@ namespace Geoffardy
         public int getPoints()
         {
             return points;
+        }
+
+        //Sets the question to be the daily double question
+        public void setDailyDouble()
+        {
+            dailyDoubleStatus = true;
+        }
+
+        //Returns the daily double status
+        public Boolean getDailyDoubleStatus()
+        {
+            return dailyDoubleStatus;
         }
     }
 }
